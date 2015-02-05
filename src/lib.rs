@@ -168,7 +168,7 @@ impl<'a> ToNTStr for &'a [u8] {
 
 impl ToNTStr for Path {
     fn to_nt_str(&self) -> NTStrOwned {
-        use std::path::{BytesContainer};
+        use std::old_path::{BytesContainer};
         self.container_as_bytes().to_nt_str()
     }
 }
